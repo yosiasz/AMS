@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @apartmentcomplex.name %>
+</p>
+
+<p>
+  <b>Streetnumber:</b>
+  <%= @apartmentcomplex.streetnumber %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @apartmentcomplex.street %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @apartmentcomplex.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @apartmentcomplex.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @apartmentcomplex.zipcode %>
+</p>
+
+
+<%= link_to 'Edit', edit_apartmentcomplex_path(@apartmentcomplex) %> |
+<%= link_to 'Back', apartmentcomplexes_path %>

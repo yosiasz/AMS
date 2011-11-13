@@ -1,0 +1,33 @@
+<h1>Listing apartmentcomplexes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Streetnumber</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apartmentcomplexes.each do |apartmentcomplex| %>
+  <tr>
+    <td><%= apartmentcomplex.name %></td>
+    <td><%= apartmentcomplex.streetnumber %></td>
+    <td><%= apartmentcomplex.street %></td>
+    <td><%= apartmentcomplex.city %></td>
+    <td><%= apartmentcomplex.state %></td>
+    <td><%= apartmentcomplex.zipcode %></td>
+    <td><%= link_to 'Show', apartmentcomplex %></td>
+    <td><%= link_to 'Edit', edit_apartmentcomplex_path(apartmentcomplex) %></td>
+    <td><%= link_to 'Destroy', apartmentcomplex, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apartmentcomplex', new_apartmentcomplex_path %>

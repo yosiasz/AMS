@@ -1,0 +1,29 @@
+<h1>Listing apartmentunits</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Numberofrooms</th>
+    <th>Apartmentcomplex</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apartmentunits.each do |apartmentunit| %>
+  <tr>
+    <td><%= apartmentunit.name %></td>
+    <td><%= apartmentunit.number %></td>
+    <td><%= apartmentunit.numberofrooms %></td>
+    <td><%= apartmentunit.apartmentcomplex %></td>
+    <td><%= link_to 'Show', apartmentunit %></td>
+    <td><%= link_to 'Edit', edit_apartmentunit_path(apartmentunit) %></td>
+    <td><%= link_to 'Destroy', apartmentunit, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apartmentunit', new_apartmentunit_path %>
